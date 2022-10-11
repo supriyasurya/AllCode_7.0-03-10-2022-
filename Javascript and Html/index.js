@@ -110,6 +110,94 @@ console.log(marks) // how you would defines a var keyword
      default: console.log("more than 5 items")
 
    }
+
+    // arrow function
+    function Area(num1,num2) {
+      console.log(num1*num2); 
+      return num1 * num2
+    }
+     // traditional way to write a function
+   Area(100 , 100);
+   area1 = (num1, num2) => {
+     console.log(num1*num2)
+   return num1*num2
+   }
+    // arrow function 
+   area1(20 , 100);
+
+    // set is js collection which can store only unique values
+    const id_no = new Set([1,2,3,4,5,6,7,8,1]);
+
+    id_no.add(500)
+    id_no.delete(1);
+
+    console.log(id_no);
+
+    console.log(id_no.has(2));
+
+    console.log(id_no.forEach);
+     
+    let id;
+    id_no.forEach(function(value) {
+
+     id += value
+
+    })
+    console.log(id);
+
+    const employees = new Map([
+      ["Supriya", 17],
+      ["sandty", 18],
+      ["sandeep", 19],
+      ["surya", 20]
+  
+    ])
+    employees.set("john", 20) // set method alloes us to add a key value pair after setting a data
+  console.log(employees)
+  console.log(employees.get("surya"));
+  
+  const employeeid_no = new Set([1,2,3,4,5,6,7,8,1]);
+  console.log(employeeid_no);
 }
+var promise = new Promise(function(resolve,reject) {
+  const passingMarks = 500
+   const securedMarks = 300
+
+   if(passingMarks <= securedMarks) {
+    resolve()
+
+   }else {
+    reject()
+   }
+})
+promise.then(function () {
+  console.log("congrats you have passed the exam")
+
+}).catch(function() {
+  console.log("Try again next year")
+})
+
+ // console.log(a);
+ async function sayMyName() {
+   return "Supriya"; 
+   const response = await fetch("https://api.github.com/users") 
+  
+  console.log("before response");
+  const users = await response.json();
+  console.log("users resolved");
+  return users;
+
+ }
+ console.log("before calling say my name first")
+ let say = sayMyName();
+ console.log("after calling my name say name next")
+ say.then(users=> console.log(users));
+ console.log(say);
+ console.log("last calling my name text");
+
+
+  
+
+
 
 
