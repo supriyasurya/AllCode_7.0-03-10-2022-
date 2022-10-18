@@ -23,8 +23,8 @@
  } // how to create class in js
  let emp1 = new Employee("Supriya", 120, "SoftwareEngineer")
  let emp2 = new Employee();
- emp1.setEmployee()
- emp2.setEmployee()
+ emp1.setEmployee("supriya", 120, "Software Engineer");
+ emp2.setEmployee("Dhakshi", 123, "Programmer Analyst" )
 
  console.log(emp1.getEmployeeId());
  console.log(emp1.getEmpolyeeName())
